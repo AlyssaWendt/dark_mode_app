@@ -1,59 +1,80 @@
-// varibles for light mode
+// Variables for light mode
 $bg-light: #ffffff;
 $font-black: #000000;
 
-// varable for dark mode
+// Variables for dark mode
 $bg-dark: #333333;
 $font-white: #ffffff;
 
 body {
-    align-items: center;
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 100vh;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-   
-    &.light {
-        background-color: $bg-light;
-        color: $font-black;
-    }
+	align-items: center;
+	display: flex;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	
+	&.light {
+		background-color: $bg-light;
+		color: $font-black;
+	}
 
-    &.dark {
-        background-color: $bg-dark;
-        color: $font-white;
-    }
+	&.dark {
+		background-color: $bg-dark;
+		color: $font-white;
+	}
 }
 
 h1 {
-    text-align: center;
+	text-align: center;
 }
 
-button {
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
-   padding: 10px 20px;
-   transition: background-color 0.3s, color 0.3; 
-
-
-   body.light & {
-    background-color: #f0f0f0;
-    color: #000000;
-   }
-
-   body.dark & {
-    background-color: #333333;
-    color: #ffffff
-   }
-
-   &:hover {
-    opacity: 0.8;
-   }
+.toggle-switch {
+	position: relative;
 }
 
-.container {
-    text-align: center;
+.switch {
+	background: #ddd;
+	border-radius: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	height: 24px;
+	position: relative;
+	width: 50px;
+}
+
+.switch .icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.sun-icon {
+	left: 2px;
+}
+
+.moon-icon {
+	right: 2px;
+	opacity: 0;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked + .switch {
+	background: #555;
+}
+
+input[type="checkbox"]:checked + .switch .sun-icon {
+	opacity: 0;
+	transform: translateX(-20px);
+}
+
+input[type="checkbox"]:checked + .switch .moon-icon {
+	opacity: 1;
+	transform: translateX(0);
 }
