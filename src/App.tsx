@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ThemeProvider, useTheme } from './context/ThemeContext'
+import { ThemeToggle } from './components/ThemeToggle';
 
 const App: React.FC = () => {
   const { theme } = useTheme()
@@ -11,6 +12,7 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Welcome to the Dark Mode App</h1> 
+      <ThemeToggle />
     </div>
   )
 }
