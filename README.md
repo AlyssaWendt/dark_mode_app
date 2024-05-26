@@ -39,7 +39,7 @@ src/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/alyssawendt/dark_mode_app.git
+git clone https://github.com/AlyssaWendt/dark_mode_app.git
 cd dark_mode_app
 ```
 
