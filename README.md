@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+# Dark Mode React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React application that demonstrates how to implement a theme toggle functionality. The app allows users to switch between light and dark themes using a visually appealing toggle switch button that displays sun and moon icons. The project is built using TypeScript, React, and SASS for styling.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Toggle between light and dark themes.
+- Animated toggle switch button with sun and moon icons.
+- Responsive and accessible design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Folder Structure
+```
+src/
+├── assets/
+│ ├── moon.svg
+│ └── sun.svg
+├── components/
+│ ├── ThemeToggle.tsx
+├── context/
+│ ├── ThemeContext.tsx
+├── styles/
+│ ├── theme.scss
+├── svg.d.ts
+├── App.tsx
+├── index.tsx
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher recommended)
+- npm (v6 or higher) or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/alyssawendt/dark_mode_app.git
+cd dark_mode_app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies
 
-### `npm run eject`
+```bash
+npm install
+# or
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Start the development server:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+# or
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The app will be available at `http://localhost:3000`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage
 
-## Learn More
+### ThemeToggle Component
+The ThemeToggle component is responsible for rendering the toggle switch button and managing the theme state.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+File: `src/components/ThemeToggle.tsx`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Theme Context
+The ThemeContext provides the current theme state and a function to toggle the theme.
+
+File: `src/context/ThemeContext.tsx`
+
+### Styles
+The theme.scss file contains the styles for the light and dark themes and the toggle switch button.
+
+File: `src/styles/theme.scss`
+
+### SVG Type Declaration
+The svg.d.ts file allows TypeScript to correctly import SVG files.
+
+File: `src/svg.d.ts`
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features to suggest.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
