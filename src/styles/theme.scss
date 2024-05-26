@@ -1,0 +1,59 @@
+// varibles for light mode
+$bg-light: #ffffff;
+$font-black: #000000;
+
+// varable for dark mode
+$bg-dark: #333333;
+$font-white: #ffffff;
+
+body {
+    align-items: center;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+   
+    &.light {
+        background-color: $bg-light;
+        color: $font-black;
+    }
+
+    &.dark {
+        background-color: $bg-dark;
+        color: $font-white;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 10px 20px;
+   transition: background-color 0.3s, color 0.3; 
+
+
+   body.light & {
+    background-color: #f0f0f0;
+    color: #000000;
+   }
+
+   body.dark & {
+    background-color: #333333;
+    color: #ffffff
+   }
+
+   &:hover {
+    opacity: 0.8;
+   }
+}
+
+.container {
+    text-align: center;
+}

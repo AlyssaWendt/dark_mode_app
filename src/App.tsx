@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
-import { ThemeToggle } from './components/ThemeToggle';
+import { ThemeToggle } from './components/ThemeToggle'
+import './styles/theme.scss'
 
 const App: React.FC = () => {
   const { theme } = useTheme()
